@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Crimson Lion Kings</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Música de fundo -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_876f1882fb.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Som de clique -->
+  <audio id="click-sound">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/08/audio_9d1c880476.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Modal personalizado -->
+  <div id="custom-confirm" style="display: none;">
+    <div class="modal">
+      <p>Deseja realmente enviar este formulário? 🦁</p>
+      <button onclick="submitForm()">Sim</button>
+      <button onclick="closeConfirm()">Não</button>
+    </div>
+  </div>
+
+  <!-- Página Inicial -->
+  <div id="home">
+    <header>
+      <h1>𝓒𝓻𝓲𝓶𝓼𝓸𝓷 𝓛𝓲𝓸𝓷 𝓚𝓲𝓷𝓰𝓼</h1>
+      <p class="tagline">A realeza domina os mares de Vox Seas</p>
+    </header>
+
+    <section class="info">
+      <p><strong>Jogo:</strong> Vox Seas</p>
+      <p><strong>Tripulantes:</strong> 10 membros ativos</p>
+      <p><strong>Discord:</strong> <code>mayy.xd2</code></p>
+      <a href="https://discord.gg/X2ctd33vMM" target="_blank">
+        <button class="glow-button">Entrar no Servidor</button>
+      </a>
+      <br><br>
+      <button class="glow-button" onclick="showForm()">Teste de Tripulação</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Crimson Lion Kings</p>
+    </footer>
+  </div>
+
+  <!-- Página do Formulário -->
+  <div id="form-page" style="display: none;">
+    <h2>Formulário de Entrada</h2>
+    <form id="entry-form" action="https://formsubmit.co/jihro1203@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="Nome no Roblox" placeholder="Nome no Roblox" required>
+      <input type="text" name="ID no Roblox" placeholder="ID no Roblox" required>
+      <input type="text" name="Idade" placeholder="Idade" required>
+      <input type="text" name="Frutas no inventário" placeholder="Frutas no inventário" required>
+      <input type="text" name="Fruta ativa" placeholder="Fruta ativa" required>
+      <input type="text" name="Estilos de luta" placeholder="Estilos de luta" required>
+      <input type="text" name="Estilo de luta ativo" placeholder="Estilo de luta ativo" required>
+      <input type="text" name="Level" placeholder="Level" required>
+      <input type="text" name="Plataforma" placeholder="Plataforma" required>
+      <input type="text" name="Discord" placeholder="Seu Discord" required>
+      <input type="text" name="Nome verdadeiro" placeholder="Seu nome (opcional)">
+      <textarea name="Pontos positivos" placeholder="Fale sobre seus pontos positivos..." rows="3" required></textarea>
+      <textarea name="Por que entrar na tripulação?" placeholder="Por que quer entrar?" rows="4" required></textarea>
+
+      <button class="glow-button" type="button" onclick="openConfirm()">Enviar Formulário</button>
+    </form>
+  </div>
+
+</body>
+</html>
